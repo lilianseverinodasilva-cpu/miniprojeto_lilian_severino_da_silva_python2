@@ -42,14 +42,14 @@ Utilizando técnicas de normalização por linha (`pd.crosstab(normalize='index'
 ### 2. Volumetria de Vendas por Categoria
 Geração de gráficos de barras horizontais e verticais customizados sob as diretrizes de *Data Storytelling*, limpando ruídos visuais (como remoção de bordas e grades excessivas) e exibindo o ranking real de compras por categoria do produto.
 
-[Vendas por Categoria (Total de Compras Únicas)]
-("https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Vendas%20por%20Categoria%20(Total%20de%20Compras%20%C3%9Anicas).png")
+![Vendas por Categoria (Total de Compras Únicas)]
+(https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Vendas%20por%20Categoria%20(Total%20de%20Compras%20%C3%9Anicas).png)
 
 ### 3. Relação classe social e montante de compras
 Criou-se um gráfico de barras para mostrar a relação entre as classes sociais (A, B, C) e o montante de compras. A classe B é a que mais gerou compras, tendo mais que o dobro de valor da classe C. A classe A gerou pouco valor aos dados. Isto mostra que estratégias de marketing deveriam/devem focar no público da classe B.
 
-[Quantidade de Registros por Classe Social]
-("https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Quantidade%20de%20Registros%20por%20Classe%20Social.png")
+![Quantidade de Registros por Classe Social]
+(https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Quantidade%20de%20Registros%20por%20Classe%20Social.png)
 ---
 
-Feito por Lilian Severino da Silva
+Criado por Lilian Severino da Silva
