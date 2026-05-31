@@ -30,9 +30,9 @@ O projeto identificou e resolveu armadilhas clássicas que costumam quebrar rela
 2. **Validação de Identificadores:** Investigação estatística da coluna `id_compra` (identificada como `int64`). A validação garantiu que a coluna preservava a integridade de "carrinhos fechados" e orientou o uso de agregações estritas por contagem (`count`/`size`), blindando o projeto contra erros matemáticos em tabelas dinâmicas.
 3. **Filtragem de Escopo:** Redução e consolidação da base final para **730.219 linhas** distribuídas em 11 colunas de alta integridade, mapeando exatamente **18.471 compras únicas**.
 4. **A coluna data:** Esta coluna estava em formato string e não datetime. A conversão foi feita para melhor análise futura. Também foi criada uma coluna data_br, em string, para a visualização dos dados em formato universal.
-5. **Outliers:** Não havia dados considerados outliers, mesmo após a criação, por Feature Engineering, da coluna itens_por_compra. Usou-se o método IQR e Z-score, que retornaram valor 0. O capping, então, nem vou aplicado.
----
+5. **Outliers:** Não havia dados considerados outliers, mesmo após a criação, por Feature Engineering, da coluna itens_por_compra. Usou-se o método IQR e Z-score, que retornaram valor 0. O capping, então, não foi aplicado.
 
+---
 
 ## Insights de Negócio e Análise Exploratória
 
@@ -42,14 +42,13 @@ Utilizando técnicas de normalização por linha (`pd.crosstab(normalize='index'
 ### 2. Volumetria de Vendas por Categoria
 Geração de gráficos de barras horizontais e verticais customizados sob as diretrizes de *Data Storytelling*, limpando ruídos visuais (como remoção de bordas e grades excessivas) e exibindo o ranking real de compras por categoria do produto.
 
-![Vendas por Categoria (Total de Compras Únicas)]
-(https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Vendas%20por%20Categoria%20(Total%20de%20Compras%20%C3%9Anicas).png)
+![Vendas por Categoria (Total de Compras Únicas)](graficos/Vendas%20por%20Categoria%20(Total%20de%20Compras%20%C3%9Anicas).png)
 
 ### 3. Relação classe social e montante de compras
 Criou-se um gráfico de barras para mostrar a relação entre as classes sociais (A, B, C) e o montante de compras. A classe B é a que mais gerou compras, tendo mais que o dobro de valor da classe C. A classe A gerou pouco valor aos dados. Isto mostra que estratégias de marketing deveriam/devem focar no público da classe B.
 
-![Quantidade de Registros por Classe Social]
-(https://github.com/lilianseverinodasilva-cpu/miniprojeto_lilian_severino_da_silva_python2/blob/main/graficos/Quantidade%20de%20Registros%20por%20Classe%20Social.png)
+![Quantidade de Registros por Classe Social](graficos/Quantidade%20de%20Registros%20por%20Classe%20Social.png)
+
 ---
 
 Criado por Lilian Severino da Silva
