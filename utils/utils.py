@@ -128,3 +128,29 @@ def encontrar_falsos_nulos(df):
         print("-" * 100)
         print(f"⚠️ Alerta: Foram encontrados {total_fantasmas_encontrados:,} falsos nulos no total!".replace(',', '.'))
     print("-" * 100)
+
+
+
+#Ler o arquivo csv de forma nativa
+import csv
+
+def testar_leitura_nativa(caminho_arquivo: str, limitar_linhas: int = 5):
+    """
+    Realiza a leitura e extração dos arquivos de dados de forma 
+    estruturada e nativa utilizando csv.DictReader conforme os critérios do projeto.
+    """
+    print(f"📖 Iniciando leitura nativa estruturada (DictReader) de: {caminho_arquivo}")
+    
+    try:
+        with open(caminho_arquivo, mode='r', encoding='utf-8-sig') as arquivo:
+            # O DictReader mapeia as informações de cada linha para um dicionário (chave: valor)
+            leitor_dict = csv.DictReader(arquivo)
+            
+            for i, linha in enumerate(leitor_dict):
+                if i >= limitar_linhas:
+                    break
+                # Exibe a estrutura de dicionário de cada linha
+                print(f"🔹 Registro {i+1}: {dict(linha)}")
+                
+    except FileNotFoundError:
+        print(f"❌ Arquivo não encontrado no caminho: {caminho_arquivo}")
